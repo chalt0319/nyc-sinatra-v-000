@@ -30,6 +30,8 @@ class FiguresController < ApplicationController
       @land2 = Landmark.new(name: params[:land][:name])
       @fig.landmarks << @land2
     end
+    @fig.save 
+    redirect "/figure/#{@fig.id}"
   end
 
   get '/figure/:id' do
