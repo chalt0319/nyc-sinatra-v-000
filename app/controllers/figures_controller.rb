@@ -14,9 +14,11 @@ class FiguresController < ApplicationController
       params[:fig][:titles].each do |id|
         @title = Title.find(id)
         @fig.titles << @title
-      end 
+      end
     end
     if params[:title][:name] != "" 
+      @title2 = Title.find_by(name: params[:title][:name])
+    end 
   end
 
   get '/figure/:id' do
