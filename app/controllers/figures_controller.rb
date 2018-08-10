@@ -16,6 +16,7 @@ class FiguresController < ApplicationController
         @fig.titles << @title
       end 
     end
+    if params[:title][:name] != "" 
   end
 
   get '/figure/:id' do
