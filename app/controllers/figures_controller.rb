@@ -26,9 +26,9 @@ class FiguresController < ApplicationController
         @fig.landmarks << @land
       end
     end
-    if params[:title][:name] != ""
-      @title2 = Title.new(name: params[:title][:name])
-      @fig.titles << @title2
+    if params[:land][:name] != ""
+      @land2 = Landmark.new(name: params[:land][:name])
+      @fig.landmarks << @land2
     end
   end
 
