@@ -1,2 +1,5 @@
 <h1><%=@fig.name%></h1>
 
+<%@fig.titles.each do |title|%>
+<p><%=title.name%></p>
+<%end%>
