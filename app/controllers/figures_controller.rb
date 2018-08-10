@@ -10,6 +10,7 @@ class FiguresController < ApplicationController
 
   post '/figres/new' do
     @fig = Figure.new(name: params[:fig][:name])
+    if params[:fig][:titles]
   end
 
   get '/figure/:id' do
