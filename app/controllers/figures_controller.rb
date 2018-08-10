@@ -13,6 +13,8 @@ class FiguresController < ApplicationController
     if !!params[:fig][:titles]
       params[:fig][:titles].each do |id|
         @title = Title.find(id)
+        @fig.titles << @title
+      end 
     end
   end
 
