@@ -1,5 +1,5 @@
 <h1>Below are a list of all current Figures:</h1>
 
 <%Figure.all.each do |fig|%>
-<p></p>
+<p><a href="/figure/<%=fig.id%>"><%=fig.name%></a></p>
 <%end%>
