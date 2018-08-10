@@ -5,7 +5,7 @@
   <%if !Title.all.empty?%>
   Please choose the appropriate titles from the list below:
   <%Title.all.each do |title|%>
-
+  <p><input type="checkbox" name="title"><%=title.name%></p>
   <%end%>
   <%end%>
 
