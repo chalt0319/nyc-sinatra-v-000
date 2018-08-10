@@ -5,5 +5,6 @@ class FiguresController < ApplicationController
 
   get '/figure/:id' do
     @fig = Figure.find(params[:id])
+    erb :'/figures/show'
   end
 end
