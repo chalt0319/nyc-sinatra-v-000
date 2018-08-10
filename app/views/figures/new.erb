@@ -1,11 +1,11 @@
 <h1>Create a new Figure:</h1>
 
 <form action="/figures/new" method="post">
-  <p>Figure Name: <input type="text" name="name"></p>
+  <p>Figure Name: <input type="text" name="fig[name]"></p>
   <%if !Title.all.empty?%>
   Please choose the appropriate titles from the list below:
   <%Title.all.each do |title|%>
-  <p><input type="checkbox" name="title"><%=title.name%></p>
+  <p><input type="checkbox" name="fig[title]"><%=title.name%></p>
   <%end%>
   <%end%>
 
