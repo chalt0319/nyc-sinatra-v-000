@@ -8,7 +8,7 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
-  post '/figres/new' do
+  post '/figures/new' do
     @fig = Figure.new(name: params[:fig][:name])
     if !!params[:fig][:titles]
       params[:fig][:titles].each do |id|
