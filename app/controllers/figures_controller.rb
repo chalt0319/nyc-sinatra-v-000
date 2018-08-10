@@ -18,6 +18,7 @@ class FiguresController < ApplicationController
     end
     if params[:title][:name] != ""
       @title2 = Title.new(name: params[:title][:name])
+      @fig.titles << @title2
     end
   end
 
