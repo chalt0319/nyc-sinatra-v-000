@@ -11,6 +11,7 @@ class FiguresController < ApplicationController
   post '/figres/new' do
     @fig = Figure.new(name: params[:fig][:name])
     if !!params[:fig][:titles]
+      @title = Title.find(params[:fig][:titles])
     end 
   end
 
