@@ -20,6 +20,16 @@ class FiguresController < ApplicationController
       @title2 = Title.new(name: params[:title][:name])
       @fig.titles << @title2
     end
+    if !!params[:fig][:land]
+      params[:fig][:titles].each do |id|
+        @title = Title.find(id)
+        @fig.titles << @title
+      end
+    end
+    if params[:title][:name] != ""
+      @title2 = Title.new(name: params[:title][:name])
+      @fig.titles << @title2
+    end
   end
 
   get '/figure/:id' do
