@@ -8,7 +8,11 @@ class FiguresController < ApplicationController
     erb :'/figures/show'
   end
 
-  get '/figure/new' do 
+  get '/figure/new' do
     erb :'/figures/new'
-  end 
+  end
+
+  post '/figres/new' do
+    
+  end
 end
