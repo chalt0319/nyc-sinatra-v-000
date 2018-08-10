@@ -2,6 +2,7 @@
 
 <form action="/figures/new" method="post">
   <p>Figure Name: <input type="text" name="name"></p>
+  <%if !Title.all.empty?%>
   <%Title.all.each do |title|%>
 
   <%end%>
