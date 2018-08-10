@@ -11,7 +11,7 @@
   <p>If needed, please enter new Title here: <input type="text" name="title[name]"></p>
   <%if !Landmark.all.empty?%>
   <p>Please choose the appropriate Landmakrs from the list below:</p>
-  <%Landmark.all.each do |title|%>
+  <%Landmark.all.each do |land|%>
   <p><input type="checkbox" name="fig[titles][]" value="<%=title.id%>"><%=title.name%></p>
   <%end%>
   <%end%>
