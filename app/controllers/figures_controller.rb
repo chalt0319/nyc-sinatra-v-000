@@ -1,5 +1,5 @@
 class FiguresController < ApplicationController
-  
+
   get '/figures' do
     erb :'/figures/index'
   end
@@ -14,6 +14,6 @@ class FiguresController < ApplicationController
   end
 
   post '/figres/new' do
-    
+
   end
 end
