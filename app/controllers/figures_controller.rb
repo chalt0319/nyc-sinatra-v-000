@@ -16,9 +16,9 @@ class FiguresController < ApplicationController
         @fig.titles << @title
       end
     end
-    if params[:title][:name] != "" 
-      @title2 = Title.find_by(name: params[:title][:name])
-    end 
+    if params[:title][:name] != ""
+      @title2 = Title.new(name: params[:title][:name])
+    end
   end
 
   get '/figure/:id' do
