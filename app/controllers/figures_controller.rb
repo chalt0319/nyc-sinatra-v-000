@@ -31,10 +31,10 @@ class FiguresController < ApplicationController
       @fig.landmarks << @land2
     end
     @fig.save
-    redirect "/figure/#{@fig.id}"
+    redirect "/figures/#{@fig.id}"
   end
 
-  get '/figure/:id' do
+  get '/figures/:id' do
     @fig = Figure.find(params[:id])
     erb :'/figures/show'
   end
