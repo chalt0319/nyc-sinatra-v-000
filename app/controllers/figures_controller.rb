@@ -22,8 +22,8 @@ class FiguresController < ApplicationController
     end
     if !!params[:fig][:land]
       params[:fig][:land].each do |id|
-        @title = Landmark.find(id)
-        @fig.titles << @title
+        @land = Landmark.find(id)
+        @fig.landmarks << @land
       end
     end
     if params[:title][:name] != ""
