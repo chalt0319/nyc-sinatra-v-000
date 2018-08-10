@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
     end
     if !!params[:fig][:land]
       params[:fig][:land].each do |id|
-        @title = Title.find(id)
+        @title = Landmark.find(id)
         @fig.titles << @title
       end
     end
