@@ -11,8 +11,9 @@ class FiguresController < ApplicationController
   post '/figres/new' do
     @fig = Figure.new(name: params[:fig][:name])
     if !!params[:fig][:titles]
-      @title = Title.find(params[:fig][:titles])
-    end 
+      params[:fig][:titles].each do |id|
+        @title = Title.find(id)
+    end
   end
 
   get '/figure/:id' do
